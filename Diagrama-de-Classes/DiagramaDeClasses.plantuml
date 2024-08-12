@@ -1,23 +1,23 @@
 @startuml
-interface ReprodutorMusical {
+class ReprodutorMusical implements DispositivoMultifuncional {
     + void tocar()
     + void pausar()
     + void selecionarMusica(String musica)
 }
 
-interface AparelhoTelefonico {
+class AparelhoTelefonico implements DispositivoMultifuncional {
     + void ligar(String numero)
     + void atender()
     + void iniciarCorreioVoz()
 }
 
-interface NavegadorNaInternet {
+class NavegadorNaInternet implements DispositivoMultifuncional {
     + void exibirPagina(String url)
     + void adicionarNovaAba()
     + void atualizarPagina()
 }
 
-class DispositivoMultifuncional implements ReprodutorMusical, AparelhoTelefonico, NavegadorNaInternet {
+interface DispositivoMultifuncional{
     + void tocar()
     + void pausar()
     + void selecionarMusica(String musica)
