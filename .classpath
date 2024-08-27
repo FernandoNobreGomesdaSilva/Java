@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="ClasseEnum/src"/>
+	<classpathentry kind="src" path="Collections-java-api-2024/src"/>
+	<classpathentry kind="src" path="Conta-Banco/src"/>
+	<classpathentry kind="src" path="DesafioControleFluxo/src"/>
+	<classpathentry kind="src" path="Diagrama-de-Classes/Classes/src"/>
+	<classpathentry kind="output" path="ClasseEnum/bin"/>
+</classpath>
