@@ -46,7 +46,8 @@ public class ConjuntoConvidados {
 	    conjuntoConvidados.adicionarConvidado("Bob", 1235);
 	    conjuntoConvidados.adicionarConvidado("Charlie", 1235);
 	    conjuntoConvidados.adicionarConvidado("David", 1236);
-
+	    //conjuntoConvidados.contarConvidados();
+	    
 	    // Exibindo os convidados no conjunto
 	    System.out.println("Convidados no conjunto:");
 	    conjuntoConvidados.exibirConvidados();
