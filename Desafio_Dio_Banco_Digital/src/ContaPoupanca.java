@@ -3,19 +3,19 @@ public class ContaPoupanca extends Banco{
 	private static final int agenciaPadrao = 1;
     private static int sequencia = 1;
 	
-	private double saldoContaPoupana;
+	private double saldoContaPoupanca;
 	
-	public ContaPoupanca(String nome, String cpf, int agencia, int conta, double saldo, double saldoContaPoupana) {
+	public ContaPoupanca(String nome, String cpf, int agencia, int conta, double saldo, double saldoContaPoupanca) {
 		super(nome, cpf, agenciaPadrao, sequencia++, saldo);
-		this.saldoContaPoupana = saldoContaPoupana;
+		this.saldoContaPoupanca = saldoContaPoupanca;
 	}
 
-	public double getSaldoContaPoupana() {
-		return saldoContaPoupana;
+	public double getSaldoContaPoupanca() {
+		return saldoContaPoupanca;
 	}
 
-	public void setSaldoContaPoupana(double saldoContaPoupana) {
-		this.saldoContaPoupana = saldoContaPoupana;
+	public void setSaldoContaPoupanca(double saldoContaPoupanca) {
+		this.saldoContaPoupanca = saldoContaPoupanca;
 	}
 	
 	@Override
@@ -39,7 +39,7 @@ public class ContaPoupanca extends Banco{
 	public void imprimirExtrato(){
 		System.out.println("||--------------------Extrato conta poupanca--------------------||");
 		super.imprimirExtrato();
-		System.out.println("Saldo da Poupanca (reserva): R$  " +(this.getSaldoContaPoupana() + this.getSaldo()));
+		System.out.println("Saldo da Poupanca (reserva): R$  " +(this.getSaldoContaPoupanca()+ this.getSaldo()));
 	}
 	
 	

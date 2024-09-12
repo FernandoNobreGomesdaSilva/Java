@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public abstract class Banco {
     private String nome;
@@ -77,6 +75,7 @@ public abstract class Banco {
 		this.sacar(valor);
 		contaDestino.depositar(valor);
 	}
+
     public void imprimirExtrato() {
         System.out.println("Nome: " + this.getNome());
         System.out.println("CPF: " + this.getCpf());
