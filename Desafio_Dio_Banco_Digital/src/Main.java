@@ -1,16 +1,18 @@
+
+
 public class Main {
     public static void main(String[] args) {
         // Criação de CadastroCliente
         CadastroCliente cadastro = new CadastroCliente();
         
         // Criação de Conta Corrente
-        ContaCorrente contaCorrente = new ContaCorrente("Joao da Silva", "999.999.999-99", 5000.00, 1000.00, 10000.00);
+        ContaCorrente contaCorrente = new ContaCorrente("Silva", "999.999.999-00", 5000.00, 1000.00, 10000.00);
         cadastro.CriarCorrente(contaCorrente); 
         System.out.println("Conta Corrente cadastrada:");
         contaCorrente.imprimirExtrato();
 
         // Criação de Conta Poupança
-        ContaPoupanca contaPoupanca = new ContaPoupanca("Joao da Silva", "999.999.999-99", 0, 0, 0.00, 2000.00);
+        ContaPoupanca contaPoupanca = new ContaPoupanca("Silva", "999.999.999-00", 0, 0, 0.00, 2000.00);
         cadastro.CriarPoupanca(contaPoupanca);
         System.out.println("Conta Poupança cadastrada:");
         contaPoupanca.imprimirExtrato();
@@ -41,5 +43,7 @@ public class Main {
         System.out.println("Extrato após transferência:");
         contaCorrente.imprimirExtrato();
         contaPoupanca.imprimirExtrato();
+        
     }
+    
 }

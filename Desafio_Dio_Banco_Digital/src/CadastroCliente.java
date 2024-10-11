@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class CadastroCliente {
+public class CadastroCliente{
 	// URL do banco de dados (formato: jdbc:mysql://servidor:porta/nome_do_banco)
     String url = "jdbc:mysql://localhost:3306/banco";
     String usuario = "root"; // Substitua pelo seu usuário do MySQL
@@ -34,15 +34,18 @@ public class CadastroCliente {
 
         } catch (SQLException e) {
             e.printStackTrace();
+            
         }
+        
     }
+    
     public void CriarPoupanca(ContaPoupanca contaPoupanca) {
     	String sqlcontaPoupanca = "INSERT INTO ContaPoupanca (nome, cpf, agencia, conta, saldo, saldoContaPoupana)"
                 + " VALUES (?, ?, ?, ?, ?, ?)";
         try (Connection conn = DriverManager.getConnection(url, usuario, senha);
                 PreparedStatement stmt = conn.prepareStatement(sqlcontaPoupanca)) {
 
-               // Setando os parâmetros da query com os valores do objeto ContaCorrente
+               // Setando os parâmetros da query com os valores do objeto ContaPoupanca
                stmt.setString(1, contaPoupanca.getNome());
                stmt.setString(2, contaPoupanca.getCpf());
                stmt.setInt(3, contaPoupanca.getAgencia());
@@ -64,6 +67,7 @@ public class CadastroCliente {
            } catch (SQLException e) {
                e.printStackTrace();
            }
-    	
+        
     }
+    
 }
